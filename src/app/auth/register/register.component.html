@@ -1,1 +1,20 @@
-<p>register works!</p>
+<div id="signup" class="sign-up-htm">
+  <h3>Sign Up</h3>
+  <form class="signup" method="post" [formGroup]="signupForm" (ngSubmit)="registerUser()">
+    <div class="group form-group">
+      <label for="pass" class="label">Email Address</label>
+      <input id="pass" class="form-control input" formControlName="email" placeholder="Enter email" required >
+    </div>
+    <div class="group form-group">
+      <label for="user" class="label">Username</label>
+      <input id="user" class="input form-control" formControlName="username" placeholder="Enter your username" required type="text">
+    </div>
+    <div class="group form-group">
+      <label for="pass" class="label">Password</label>
+      <input id="pass" type="password" class="form-control input" formControlName="password" placeholder="Password" required  data-type="password">
+    </div>     
+    <div class="group">
+      <input type="submit" class="button" value="Sign Up">
+    </div>
+  </form> 
+  
